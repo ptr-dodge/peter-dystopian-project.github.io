@@ -1,0 +1,136 @@
+@import "global";
+
+@title-spacing: 2em;
+
+body {
+  .flex(center, flex-start, column);
+  height: auto;
+  overflow-x: hidden;
+}
+
+hr {
+    border: 1px solid darken(@light-color[f], 35%);
+    margin: 1.5em 0;
+}
+
+header {
+  float: right;
+
+  h1 {
+    font-size: 0.75rem;
+    color: @theme-color[1];
+    animation: fade-color 10s ease-in infinite alternate;
+  }
+
+  @keyframes fade-color {
+    from {
+      color: @theme-color[1];
+    }
+    to {
+      color: @theme-color[2];
+    }
+  }
+}
+
+article,
+aside {
+  padding-left: @title-spacing;
+}
+
+aside {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  small {
+    float: right;
+    color: @light-color[f];
+    margin-top: 0.25rem
+  }
+}
+
+section {
+  .flex(flex-start, flex-start, column);
+}
+
+h2 {
+  padding-bottom: 0.5em;
+}
+
+p {
+  line-height: 1.2rem;
+  text-justify: inter-word;
+}
+
+a {
+  color: @theme-color[1];
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+  position: relative;
+
+  &:hover {
+    color: @theme-color[2];
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.1rem;
+        background: @theme-color[1];
+        position: absolute;
+        bottom: -0.1rem;
+        left: 0;
+        transition: 200ms ease-in-out;
+    }
+  }
+}
+
+p {
+    margin: 0 0 0.25em @title-spacing;
+}
+
+ul {
+  margin-left: @title-spacing;
+  padding-bottom: 1em;
+}
+
+li,
+p,
+h1,
+h2 {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.content {
+  width: 75vw;
+  height: 100%;
+  padding: 2em;
+  background-color: @dark-color[d];
+}
+
+.title {
+  .flex(flex-start, center, column);
+  margin-bottom: @title-spacing;
+
+  h1,
+  small {
+    line-height: 1.2em;
+  }
+}
+
+.mc-meme {
+  width: 25vw;
+  aspect-ratio: 5/3;
+}
+
+.space {
+  height: 20em;
+}
+
+.half {
+    width: 100%;
+}
