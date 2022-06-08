@@ -2,6 +2,14 @@
 
 @title-spacing: 2em;
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body, html {
+    scrollbar-width: none;  /* Firefox */
+}
+
 body {
   .flex(center, flex-start, column);
   height: auto;
@@ -9,8 +17,8 @@ body {
 }
 
 hr {
-    border: 1px solid darken(@light-color[f], 35%);
-    margin: 1.5em 0;
+  border: 1px solid darken(@light-color[f], 35%);
+  margin: 1.5em 0;
 }
 
 header {
@@ -47,7 +55,7 @@ aside {
   small {
     float: right;
     color: @light-color[f];
-    margin-top: 0.25rem
+    margin-top: 0.25rem;
   }
 }
 
@@ -74,21 +82,21 @@ a {
     color: @theme-color[2];
 
     &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 0.1rem;
-        background: @theme-color[1];
-        position: absolute;
-        bottom: -0.1rem;
-        left: 0;
-        transition: 200ms ease-in-out;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0.1rem;
+      background: @theme-color[1];
+      position: absolute;
+      bottom: -0.1rem;
+      left: 0;
+      transition: 200ms ease-in-out;
     }
   }
 }
 
 p {
-    margin: 0 0 0.25em @title-spacing;
+  margin: 0 0 0.25em @title-spacing;
 }
 
 ul {
@@ -132,5 +140,5 @@ h2 {
 }
 
 .half {
-    width: 100%;
+  width: 100%;
 }

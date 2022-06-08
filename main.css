@@ -29,6 +29,14 @@ body {
   font-size: 1rem;
   font-family: Helvetica;
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
+body,
+html {
+  scrollbar-width: none;
+  /* Firefox */
+}
 body {
   display: flex;
   justify-content: center;
